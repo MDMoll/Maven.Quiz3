@@ -1,23 +1,36 @@
 package rocks.zipcode.io.quiz3.fundamentals;
 
+import java.util.stream.Stream;
+
 /**
  * @author leon on 09/12/2018.
  */
 public class VowelUtils {
+    
     public static Boolean hasVowels(String word) {
-        return null;
+        return word.matches("[^aeiouAEIOU]*[aeiouAEIOU].*$");
     }
-
+    
     public static Integer getIndexOfFirstVowel(String word) {
-        return null;
+        Integer answer = -1;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (isVowel(c)) {
+                answer = word.indexOf(c);
+                break;
+            } else {
+                answer = null;
+            }
+        }
+        return answer;
     }
-
-
+    
+    
     public static Boolean startsWithVowel(String word) {
-        return null;
+        return word.matches("(^[AEIOU].*$)");
     }
-
+    
     public static Boolean isVowel(Character character) {
-        return null;
+        return "AEIOUaeiou".indexOf(character) != -1;
     }
 }
