@@ -15,8 +15,7 @@ public class ArrayUtility<SomeType> {
     }
 
     public SomeType findOddOccurringValue() {
-        
-        return array.toArray();
+    return null;
     }
 
     public SomeType findEvenOccurringValue() {
